@@ -4,15 +4,15 @@
  */
 package com.mycompany.ordenararbolbi;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author SCIS2-15
  */
 public class Mostrar extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Mostrar
-     */
+    Arbol obj = new Arbol();
     public Mostrar() {
         initComponents();
     }
@@ -57,9 +57,9 @@ public class Mostrar extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap(225, Short.MAX_VALUE))
         );
@@ -68,7 +68,10 @@ public class Mostrar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        int marca = Integer.parseInt(JOptionPane.showInputDialog("ingrese la marca en minusculas\nlenovo 1 \napple 2"));
+        String nombre = JOptionPane.showInputDialog("ingrese el nombre");
+        String color = JOptionPane.showInputDialog("ingrese su color");
+        obj.insertar(marca,nombre,color);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
